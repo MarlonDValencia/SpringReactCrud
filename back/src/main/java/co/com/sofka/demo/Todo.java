@@ -1,6 +1,5 @@
 package co.com.sofka.demo;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -8,11 +7,11 @@ import javax.persistence.Id;
 @Entity
 public class Todo {
     @Id
-    @Column(name = "id", nullable = false)
     @GeneratedValue
     private Long id;
+
     private String name;
-    private boolean idCompletado;
+    private boolean isCompleted;
 
     public Long getId() {
         return id;
@@ -30,11 +29,11 @@ public class Todo {
         this.name = name;
     }
 
-    public boolean isIdCompletado() {
-        return idCompletado;
+    public boolean isCompleted() {
+        return isCompleted;
     }
 
-    public void setIdCompletado(boolean idCompletado) {
-        this.idCompletado = idCompletado;
+    public void setCompleted(boolean completed) {
+        isCompleted = completed;
     }
 }
